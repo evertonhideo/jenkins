@@ -2,12 +2,12 @@
 
 ## building the new image:
 ```bash
-docker build -t myjenkins:1.0 .
+docker build -t myjenkins .
 ```
 
 ## running myjenkins:
 ```bash
-docker run --name myjenkins -d -p 8080:8080 -p 50000:50000 myjenkins:1.0
+docker run --name myjenkins -d -p 8080:8080 -p 50000:50000 myjenkins
 ```
 The Jenkins console will be available at http://localhost:8080
 
@@ -24,3 +24,4 @@ docker stop $(docker ps -a | grep myjenkins | awk '{print $1}')
 docker rm $(docker ps -a | grep myjenkins | awk '{print $1}')
 ```
 
+## DockerHub Repository [evertonhideowork/myjenkins](https://cloud.docker.com/repository/docker/evertonhideowork/myjenkins)
